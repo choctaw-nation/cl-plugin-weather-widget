@@ -3,7 +3,7 @@
  * Plugin Name: [Choctaw Landing] Weather Widget
  * Description: Weather Widget plugin syncs weather data from Open Weather API for Choctaw Landing (today's forecast).
  * Plugin URI: https://github.com/choctaw-nation/cl-plugin-weather-widget
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Choctaw Nation of Oklahoma
  * Author URI: https://www.choctawnation.com
  * Text Domain: cno

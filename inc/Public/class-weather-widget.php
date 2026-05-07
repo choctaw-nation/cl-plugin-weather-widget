@@ -41,11 +41,17 @@ class Weather_Widget {
 	 * The Weather_Widget constructor.
 	 */
 	public function __construct() {
-		$this->data = get_transient( Plugin_Loader::TRANSIENT_KEY );
-		if ( empty( $this->data ) ) {
+		$data = get_transient( Plugin_Loader::TRANSIENT_KEY );
+		if ( false === $data || ! is_array( $data ) ) {
 			$this->has_error = true;
 			$this->error     = 'Unable to retrieve weather data. Please try again later.';
+			if ( empty( $this->data ) ) {
+				$this->has_error = true;
+				$this->error     = 'Unable to retrieve weather data. Please try again later.';
+			}
+			return;
 		}
+		$this->data = $data;
 	}
 
 	/**

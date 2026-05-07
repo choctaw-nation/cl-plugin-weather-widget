@@ -40,6 +40,7 @@ class Plugin_Loader {
 	 */
 	public function activate(): void {
 		$this->settings->register();
+		$this->settings->initialize_defaults();
 		// add plugin settings screen
 	}
 
@@ -58,7 +59,7 @@ class Plugin_Loader {
 	 * (this is a callback function for the `register_uninstall_hook` function)
 	 */
 	public static function uninstall(): void {
-		// delete transients
+		delete_transient( self::TRANSIENT_KEY );
 		// delete options
 	}
 
