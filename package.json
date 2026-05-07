@@ -1,0 +1,46 @@
+{
+	"name": "cl-plugin-weather-widget",
+	"version": "1.0.0",
+	"description": "A plugin that fetches weather data for the Choctaw Landing site.",
+	"prettier": "@wordpress/prettier-config",
+	"browserslist": [
+		"extends @wordpress/browserslist-config"
+	],
+	"engines": {
+		"node": ">= 24"
+	},
+	"author": "Choctaw Nation of Oklahoma",
+	"files": [
+		"build",
+		"inc",
+		"README.md",
+		"LICENSE",
+		"CHANGELOG.md",
+		"cl-plugin-weather-widget.php",
+		"vendor"
+	],
+	"scripts": {
+		"build": "wp-scripts build",
+		"lint:css": "npx stylelint '**/*.scss' '**/*.css' --fix --allow-empty-input",
+		"lint:js": "npx eslint --fix",
+		"packages-update": "wp-scripts packages-update",
+		"plugin-zip": "wp-scripts build && wp-scripts plugin-zip",
+		"start": "wp-scripts start"
+	},
+	"devDependencies": {
+		"@eslint/compat": "^2",
+		"@wordpress/api-fetch": "^7.45.0",
+		"@wordpress/components": "^33.0.0",
+		"@wordpress/dom-ready": "^4.45.0",
+		"@wordpress/element": "^6.45.0",
+		"@wordpress/eslint-plugin": "^25",
+		"@wordpress/scripts": "^32",
+		"eslint": "^9",
+		"globals": "^17",
+		"prettier": "npm:wp-prettier@^3",
+		"stylelint": "^17",
+		"stylelint-config-standard-scss": "^17",
+		"stylelint-scss": "^7",
+		"typescript": "^6"
+	}
+}
