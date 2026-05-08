@@ -11,6 +11,9 @@
 
 namespace ChoctawNation\WeatherWidget\WP\AdminScreen;
 
+use ChoctawNation\WeatherWidget\Http\API;
+use ChoctawNation\WeatherWidget\Jobs\Weather_Data;
+use ChoctawNation\WeatherWidget\WP\Notifier;
 use ChoctawNation\WeatherWidget\WP\Plugin_Settings;
 use WP_Error;
 use WP_REST_Controller;
@@ -132,6 +135,10 @@ class Settings_Rest_Controller extends WP_REST_Controller {
 				);
 			}
 		}
+		$api_key      = $sanitized['apiKey'];
+		$api          = new API( $api_key );
+		$weather_data = new Weather_Data( $api, new Notifier( 'kroelke@choctawnation.com' ) );
+		$weather_data->fetch_and_store_weather_data();
 
 		return new WP_REST_Response(
 			array(
