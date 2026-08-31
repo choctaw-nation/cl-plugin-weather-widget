@@ -1,0 +1,117 @@
+{
+	"languages": {
+		"PHP": {
+			"language_servers": [
+				"phpactor",
+				"phpcs",
+				"!intelephense",
+				"!phptools",
+				"!phpantom",
+				"..."
+			],
+			"format_on_save": "on",
+			"code_actions_on_format": {
+				"source.fixAll.phpcs": true
+			}
+		},
+
+		"JavaScript": {
+			"format_on_save": "on",
+			"formatter": [
+				{
+					"code_action": "source.fixAll.eslint"
+				},
+				{
+					"external": {
+						"command": "prettier",
+						"arguments": [
+							"--stdin-filepath",
+							"{buffer_path}"
+						]
+					}
+				}
+			]
+		},
+
+		"TypeScript": {
+			"format_on_save": "on",
+			"formatter": [
+				{
+					"code_action": "source.fixAll.eslint"
+				},
+				{
+					"external": {
+						"command": "prettier",
+						"arguments": [
+							"--stdin-filepath",
+							"{buffer_path}"
+						]
+					}
+				}
+			]
+		},
+
+		"TSX": {
+			"format_on_save": "on",
+			"formatter": [
+				{
+					"code_action": "source.fixAll.eslint"
+				},
+				{
+					"external": {
+						"command": "prettier",
+						"arguments": [
+							"--stdin-filepath",
+							"{buffer_path}"
+						]
+					}
+				}
+			]
+		},
+
+		"CSS": {
+			"format_on_save": "on",
+			"formatter": [
+				{
+					"external": {
+						"command": "prettier",
+						"arguments": [
+							"--stdin-filepath",
+							"{buffer_path}"
+						]
+					}
+				},
+				{
+					"code_action": "source.fixAll.stylelint"
+				}
+			]
+		}
+	},
+
+	"lsp": {
+		"eslint": {
+			"settings": {
+				"workingDirectory": {
+					"mode": "auto"
+				}
+			}
+		},
+
+		"stylelint-lsp": {
+			"settings": {
+				"stylelint": {
+					"snippet": [],
+					"validate": [
+						"css",
+						"postcss"
+					]
+				}
+			}
+		},
+	},
+	"terminal": {
+		"shell": {
+			"program": "/bin/zsh"
+		}
+	}
+}

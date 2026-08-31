@@ -2,7 +2,7 @@
 	"name": "choctaw-nation/choctaw-landing-weather-widget",
 	"description": "A plugin that fetches weather data for the Choctaw Landing site.",
 	"type": "project",
-	"version": "1.0.0",
+	"version": "1.0.2",
 	"autoload": {
 		"classmap": [
 			"inc/"
@@ -32,6 +32,8 @@
 		"doctrine/instantiator": "^1",
 		"phpunit/phpunit": "^9",
 		"wp-coding-standards/wpcs": "*",
-		"yoast/phpunit-polyfills": "^4.0"
+		"yoast/phpunit-polyfills": "^4.0",
+		"php-stubs/wordpress-stubs": "^7.0",
+		"php-stubs/wordpress-tests-stubs": "^7.0"
 	}
 }

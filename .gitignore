@@ -11,3 +11,5 @@
 .wp-tests/
 html-coverage/
 .phpunit.result.cache
+
+.envrc
