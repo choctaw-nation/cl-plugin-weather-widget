@@ -1,6 +1,6 @@
 {
 	"name": "cl-plugin-weather-widget",
-	"version": "1.0.0",
+	"version": "1.0.2",
 	"description": "A plugin that fetches weather data for the Choctaw Landing site.",
 	"prettier": "@wordpress/prettier-config",
 	"browserslist": [
@@ -29,12 +29,12 @@
 	},
 	"devDependencies": {
 		"@eslint/compat": "^2",
-		"@wordpress/api-fetch": "^7.45.0",
-		"@wordpress/components": "^33.0.0",
-		"@wordpress/dom-ready": "^4.45.0",
-		"@wordpress/element": "^6.45.0",
-		"@wordpress/eslint-plugin": "^25",
-		"@wordpress/scripts": "^32",
+		"@wordpress/api-fetch": "^7.54.0",
+		"@wordpress/components": "^40.0.0",
+		"@wordpress/dom-ready": "^4.54.0",
+		"@wordpress/element": "^8.6.0",
+		"@wordpress/eslint-plugin": "^25.10.0",
+		"@wordpress/scripts": "^34.2.0",
 		"eslint": "^9",
 		"globals": "^17",
 		"prettier": "npm:wp-prettier@^3",
@@ -42,5 +42,13 @@
 		"stylelint-config-standard-scss": "^17",
 		"stylelint-scss": "^7",
 		"typescript": "^6"
+	},
+	"allowScripts": {
+		"core-js-pure@3.49.0": true,
+		"fsevents@2.3.3": true,
+		"fsevents@2.3.2": true,
+		"@parcel/watcher@2.6.0": true,
+		"core-js@3.50.0": true,
+		"unrs-resolver@1.12.2": true
 	}
 }

@@ -1,0 +1,9 @@
+{
+    "$schema": "/phpactor.schema.json",
+    "php_code_sniffer.enabled": true,
+    "indexer.max_filesize_to_index": 10000000,
+    "indexer.stub_paths": [
+        "%project_root%/vendor/php-stubs/wordpress-stubs/",
+        "%project_root%/vendor/php-stubs/wordpress-tests-stubs"
+    ]
+}

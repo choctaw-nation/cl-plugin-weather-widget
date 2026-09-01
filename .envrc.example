@@ -1,0 +1,3 @@
+source "/Users/YOUR_USERNAME/Local Sites/YOUR_LOCAL_SITE/app/.envrc"
+export WP_TESTS_DIR="$PWD/.wp-tests/wordpress-tests-lib"
+export WP_CORE_DIR="$PWD/.wp-tests/wordpress"
