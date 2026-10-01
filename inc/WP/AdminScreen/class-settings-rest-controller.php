@@ -92,10 +92,9 @@ class Settings_Rest_Controller extends WP_REST_Controller {
 	 * Sensitive fields are returned as the masked placeholder when they
 	 * contain a saved value, so actual credentials are never exposed.
 	 *
-	 * @param WP_REST_Request $request The REST request object.
 	 * @return WP_REST_Response
 	 */
-	public function get_settings( WP_REST_Request $request ): WP_REST_Response {
+	public function get_settings(  ): WP_REST_Response {
 		$settings = $this->plugin_settings->get_settings();
 		return new WP_REST_Response( $settings, 200 );
 	}

@@ -40,13 +40,6 @@ class Weather_Data {
 	private string $transient_key;
 
 	/**
-	 * The length of time to cache the weather data
-	 *
-	 * @var int $cache_length
-	 */
-	private int $cache_length;
-
-	/**
 	 * Constructor
 	 *
 	 * @param API      $api The API instance to use for fetching weather data
@@ -56,7 +49,6 @@ class Weather_Data {
 		$this->api           = $api;
 		$this->notifier      = $notifier;
 		$this->transient_key = Plugin_Loader::TRANSIENT_KEY;
-		$this->cache_length  = DAY_IN_SECONDS;
 	}
 
 	/**
@@ -68,14 +60,13 @@ class Weather_Data {
 			try {
 				$data         = $this->api->get_weather_data();
 				$weather_data = $this->create_data_array( $data );
-				set_transient( $this->transient_key, $weather_data, $this->cache_length );
+				set_transient( $this->transient_key, $weather_data );
 			} catch ( \Exception $e ) {
 				$this->notifier->send_notification( 'Error fetching weather data: ' . $e->getMessage() );
 				$weather_data = array();
 			}
 		}
 	}
-
 
 	/**
 	 * Handles the data from the API
