@@ -62,17 +62,16 @@ class Weather_Data {
 	/**
 	 * Fetches weather data from the API and stores it in a transient
 	 */
-	public function fetch_and_store_weather_data() {
+	public function fetch_and_store_weather_data(): void {
 		$weather_data = get_transient( $this->transient_key );
 		if ( false === $weather_data ) {
 			try {
 				$data         = $this->api->get_weather_data();
 				$weather_data = $this->create_data_array( $data );
+				set_transient( $this->transient_key, $weather_data, $this->cache_length );
 			} catch ( \Exception $e ) {
 				$this->notifier->send_notification( 'Error fetching weather data: ' . $e->getMessage() );
 				$weather_data = array();
-			} finally {
-				set_transient( $this->transient_key, $weather_data, $this->cache_length );
 			}
 		}
 	}
