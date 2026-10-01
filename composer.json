@@ -2,7 +2,7 @@
 	"name": "choctaw-nation/choctaw-landing-weather-widget",
 	"description": "A plugin that fetches weather data for the Choctaw Landing site.",
 	"type": "project",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"autoload": {
 		"classmap": [
 			"inc/"
